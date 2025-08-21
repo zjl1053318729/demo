@@ -128,7 +128,7 @@ def show_input_help():
 
 def show_preset_prompts():
     """显示预置prompt快捷按钮"""
-    st.markdown("### 🚀 快速问题")
+    # st.markdown("### 🚀 快速问题")
     
     # 定义预置的prompt
     preset_prompts = [
@@ -161,7 +161,7 @@ def show_preset_prompts():
             st.session_state.preset_prompt = preset_prompts[1]['prompt']
             st.rerun()
     
-    st.markdown("---")
+    # st.markdown("---")
 
 def create_user_interface(container: st.container, messages: List[Dict[str, Any]],
                          is_typing: bool, message_count: int):
