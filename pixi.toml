@@ -1,0 +1,27 @@
+[project]
+name = "ai_customer_service"
+version = "0.1.0"
+description = "人在回路自动营销系统"
+authors = ["Developer <dev@example.com>"]
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64", "osx-64", "osx-arm64"]
+
+[dependencies]
+python = ">=3.9,<3.12"
+streamlit = ">=1.28.0"
+requests = ">=2.31.0"
+python-dotenv = ">=1.0.0"
+
+[feature.dev.dependencies]
+pytest = "*"
+black = "*"
+flake8 = "*"
+mypy = "*"
+
+[tasks]
+start = "streamlit run app.py --server.port 8501 --server.address 0.0.0.0"
+dev = "streamlit run app.py --server.port 8501"
+test = "pytest tests/"
+format = "black ."
+lint = "flake8 ."
+typecheck = "mypy ."
